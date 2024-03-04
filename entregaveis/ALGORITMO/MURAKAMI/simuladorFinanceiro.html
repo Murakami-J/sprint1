@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="simuladorFinanceiro.css">
+</head>
+<body>
+    <h1>Simulador Financeiro</h1>
+
+    Insira quanto custa para fabricar uma vacina: <br>
+    <input type="number" id="input_custo"> 
+    <br><br>
+
+    Insira quantas vacinas são desperdiçadas: <br>
+    <input type="number" id="input_desperdicio">
+    <br><br>
+
+    <button onclick="calcularPrejuizo()">
+        Calcular
+    </button>
+
+    <div id="exibirPrejuizo">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function calcularPrejuizo(){
+        var custo = Number(input_custo.value)
+        var desperdicio = Number(input_desperdicio.value)
+        var prejuizo = custo * desperdicio
+        var solucao = prejuizo * 0.3
+
+        exibirPrejuizo.innerHTML = `<br> 
+        Você tem um pejuízo de R$${prejuizo} !! <br>
+        Com a nossa solução, você poderá diminuir esse prejuízo em até 30.6% <br>
+        Ou seja, em aproximadamente: R$${solucao} !!!      
+        ` 
+    }
+</script>
