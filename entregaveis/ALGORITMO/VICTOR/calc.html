@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o valor investido
+    <input type="text" id="input_investimento"><br>
+    Digite o valor do prejuizo
+    <input type="text" id="input_prejuizo"><br>
+    <button onclick="retorno()">
+        Calcular Retorno
+    </button>
+    <span id="span_conta"></span>
+</body>
+</html>
+
+<script>
+    function retorno() {
+        var sistema = 50000
+        var prejuizo = input_prejuizo.value
+        var investimento = input_investimento.value
+        var perda = investimento - prejuizo 
+        var estabilidade = perda - sistema
+        var porcentagem = perda * 0.3
+        span_conta.innerHTML = `Sua perda foi de ${perda} porem com nosso software conseguimos resolver em 33%${porcentagem} com uma estabilidade de ${estabilidade} `
+    }
+</script>
