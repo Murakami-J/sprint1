@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Simulador Financeiro</h1>
+        Custo de fabricação da vacina:<br><input type="number" id="inputCusto"><p>
+        Vacinas perdidas: <br><input type="number" id="inputPerdas"><p>
+        <button onclick="calcularVacina()">Calcular</button>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    function calcularVacina() {
+        var custo = Number(inputCusto.value)
+        var perdaVacina = Number(inputPerdas.value)
+        var preju = custo * perdaVacina
+        var lucro = preju * 0.306
+
+        resultado.innerHTML = `Nós podemos reduzir seu prejuízo de R$${preju} em até 30.6%!! <br>
+        Assim gerando um lucro de até R$${lucro}!!`
+    }
+</script>
