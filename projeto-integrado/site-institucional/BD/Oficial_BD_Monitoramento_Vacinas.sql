@@ -2,7 +2,7 @@ CREATE DATABASE BD_MONITORAMENTO_VACINAS;
 USE BD_MONITORAMENTO_VACINAS;
 
 CREATE TABLE Usuario (
-	id_Usuário INT PRIMARY KEY AUTO_INCREMENT,
+	id_Usuario INT PRIMARY KEY AUTO_INCREMENT,
     nome varchar(50) NOT NULL,
     email varchar(255) NOT NULL,
     senha varchar(30) NOT NULL,
@@ -19,9 +19,9 @@ CREATE TABLE Empresa (
 
 CREATE TABLE Sensor (
 	id_Sensor INT PRIMARY KEY AUTO_INCREMENT,
-    nome char(6),
+    nome varchar(30),
     temperatura decimal(4,2),
-    umidade decimal(4,2),
+    umidade decimal(5,2),
 	statusSensor varchar(30) NOT NULL,
     
     constraint chkStatusSensor check (statusSensor in('Ativo', 'Inativo'))
