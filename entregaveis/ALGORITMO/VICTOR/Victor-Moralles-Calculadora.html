@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cssCalculadora.css">
+<body class="temafundo">
+        <h1 class="titulo">Calculadora financeira</h1>
+    <div class="caixa tela">
+        Quantidade de entrega
+        <input type="text" id="input_qntdentregaMes"><br>
+        Quantidade de lotes
+        <input type="text" id="input_qtdlote"><br>
+        Quantidade de vacina por lote
+        <input type="text" id="input_qntdvacinalote"><br>
+        Custo da vacina unidade
+        <input type="text" id="input_custovacina"><br>
+        Lotes perdidos   
+        <input type="text" id="input_qtdloteperdido"><br>
+        <button onclick="retorno()" class="butao">Simular Valor</button>
+        <span id="span_conta" class="span"></span>
+    </div>
+</body>
+</html>
+
+<script>
+    function retorno() {
+        var qtdEntregaMes = Number(input_qntdentregaMes.value) 
+        var lote = Number(input_qtdlote.value)
+        var qntdVacinaLote = Number(input_qntdvacinalote.value)
+        var custoVacina = Number(input_custovacina.value)
+        var qtdLotePerda = Number(input_qtdloteperdido.value)
+        
+        var custolote = (custoVacina * qntdVacinaLote) 
+        var custoEntregaMes = (custolote * lote) * qtdEntregaMes
+        var valorBruto = custolote * lote
+        var entregaPerdida = (qntdVacinaLote - qtdLotePerda) * qtdEntregaMes
+        var perdaVacina = custoEntregaMes - entregaPerdida  
+        var solucao = perdaVacina * 0.4
+
+        span_conta.innerHTML = `sua perda no mês foi cerca de ${perdaVacina}, porem com nosso sistema você deixa e perder ${solucao}`
+    }
+</script>

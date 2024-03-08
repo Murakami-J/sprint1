@@ -1,0 +1,39 @@
+.temafundo {background-color: #ffb6c1;}
+
+h1 {
+    width: fit-content;
+    margin: auto;
+}
+.caixa {
+    border-radius: 50px;
+} 
+
+.tela {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    background-color: #d8bfd8;
+    border: solid 2px black; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.butao {
+    background-color: #ffe4e1; color: rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 80px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.span {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
