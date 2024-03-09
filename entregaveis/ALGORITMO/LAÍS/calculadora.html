@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Calculadora Financeira</h2>
+
+    Qual o tipo de transporte?
+    <input type="text" id="input_tipotransporte">
+    <br><br>
+    Quantas vacinas são armazenadas por viagem?:
+    <input type="number" id="input_vacinasarmazenadas">
+    <br><br>
+    Qual seu investimento por viagem com as vacinas?
+    <input type="number" id="input_investimento">
+    <br><br>
+    Quantas vacinas são perdidas por viagem?
+    <input type="number" id="input_perdaviagem">
+    <br><br>
+    Quantas viagens em média são realizadas em um mês?
+    <input type="number" id="input_qtdviagens">
+    <br><br>
+    <button onclick="calcular()">Calcular Custo Anual</button>
+    <br><br>
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            var transporte = input_tipotransporte.value
+            var vacarmazenadas = Number(input_vacinasarmazenadas.value)
+            var investimento = Number(input_investimento.value)
+            var qtdviagens = Number(input_qtdviagens.value)
+            var perdaviagem = Number(input_perdaviagem.value)
+
+            var valorporvacina = investimento /vacarmazenadas 
+
+            var perdavacinasano = perdaviagem * qtdviagens
+            var perdavacinasano2 = perdavacinasano * 12
+
+            var perdadinheiroano = perdavacinasano * valorporvacina
+
+            resultado.innerHTML = `Transporte utilizado: ${transporte};<br>
+                                    Você gasta R$${valorporvacina} em cada vacina;
+            <br>
+                                    Perda de ${perdavacinasano2} vacinas no ano;
+            <br>
+                                    Perda anual de aproximadamente: R$${perdadinheiroano};`
+        }
+    </script>
+
+</body>
+</html>
