@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="corpo">
+        Informe nome da empresa: <br>
+        <input id="input_nomeEmpresa"><br>
+
+        Quantidade de vacinas transportadas por entrega:<br>
+        <input id="input_qtdPorEntrega"><br>
+
+        Quantidade de entregas por mês:<br>
+        <input id="input_qtdEntregaPorMes"><br>
+
+        Capacidade de armazenamento dos lotes:<br>
+        <input id="input_capacidadeArmazenamento"><br>
+
+        Custo de fabricação da vacina por lote:<br>
+        <input id="input_custoFabricacao"><br>
+
+        Quantidade de vacinas por lote:<br>
+        <input id="input_qtdPorLote"><br>
+
+        Quantidade de lotes por entrega:<br>
+        <input id="input_lotesPorEntrega"><br>
+
+        Temperatura ideal de armazenamento:<br>
+        <input id="input_temperaturaIdeal"><br>
+
+        Temperatura real durante o transporte:<br>
+        <input id="input_temperaturaReal"><br>
+
+        <button onclick="calcularPerda()">Calcular perda</button>
+
+
+
+
+
+        <p id="resultado"></p>
+
+
+
+</body>
+</div>
+
+</html>
+
+<script>
+    function calcularPerda() {
+        var nomeEmpresa = input_nomeEmpresa.value
+        var quantidadePorEntrega = Number(input_qtdPorEntrega.value)
+        var entregasPorMes = Number(input_qtdEntregaPorMes.value)
+        var capacidadadeArmazenamento = Number(input_capacidadeArmazenamento.value)
+        var custoFabricacao = Number(input_custoFabricacao.value)
+        var quantidadePorLote = Number(input_qtdPorLote.value)
+        var lotesPorEntrega = Number(input_lotesPorEntrega.value)
+        var temperaturaIdeal = Number(input_temperaturaIdeal.value)
+        var temperaturaReal = Number(input_temperaturaReal.value)
+
+        var totalVacinasTransportadas = quantidadePorEntrega * entregasPorMes * lotesPorEntrega * quantidadePorLote
+        var perda = 0
+
+        if (temperaturaReal < temperaturaIdeal) {
+            perda = totalVacinasTransportadas * 0.02
+        } else (temperaturaReal > temperaturaIdeal)
+        perda = totalVacinasTransportadas * 0.01
+
+        var custoPerda = perda * custoFabricacao
+
+        resultado.innerHTML = `Na empresa ${nomeEmpresa}, a perda de vacinas durante o transporte foi de ${perda} doses, resultando em uma perda financeira de $ ${custoPerda}.`
+    }
+
+
+
+</script>

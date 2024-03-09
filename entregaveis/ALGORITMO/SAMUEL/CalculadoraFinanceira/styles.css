@@ -1,0 +1,29 @@
+.corpo {
+    color: #ddebeb;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center ;
+}
+
+input, button{
+    background-color: #68a5a5;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+}
+
+button{
+    background-color: #090f0f;
+    color: #acc;
+    cursor: pointer;
+}
+
+body {
+    background-color:   #2f4f4f;
+}
