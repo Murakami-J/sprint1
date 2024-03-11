@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Signika:wght@300..700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -15,30 +15,33 @@ header{
 
 .box{
     background-color: rgb(21, 161, 255);
-    width: 50%;
-    height: 60vh;
+    width: 55%;
+    height: 65vh; 
     margin: auto;
-    margin-top: 10vh;
-    text-align: center;
+    margin-top: 7vh;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 1vw;
+}
+
+.pai{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box_titulo{
+    font-size: 3vw;
     font-family: "Madimi One", sans-serif;
 }
 
 .box_p{
     font-size: 2vw;
-    padding: 3vw;
-    padding-bottom: 0;
-   
-}
-
-.box_span{
-    font-size: 3vw;
-}
-
-.box_spanText{
     line-height: 1.4;
     font-family: "Signika", sans-serif;
+    text-align: center;
 }
 
 .box_btInicio{
@@ -58,25 +61,7 @@ header{
     cursor: pointer;
 }
 
-.div_box2{
-    width: 70%;
-    margin: auto;
- 
-}
-
-.p_titulo{
-    font-size: 3vw;
-    padding-top: 3vw;
-}
-
-.p_p1{
-    font-size: 2vw;
-    font-family: "Signika", sans-serif;
-    /* padding-top: 2vh; */
-    
-}
-
-.div_box2 input{
+.box_input{
     margin-top: 5vh;
     width: 50%;
     height: 6vh;
@@ -86,43 +71,19 @@ header{
 }
 
 .box_bt{
-    margin-top:5vh;
     width: 18vw;
     height: 7vh;
-    border-radius: 10px;
-    background-color: rgb(0, 195, 255);
-    font-size: 2vw;
-    font-family: "Signika", sans-serif;
-    color: rgb(3, 23, 39);
-}
-
-.box_bt{
-    cursor: pointer;
-
 }
 
 .box_btEscolha{
-    margin-top: 6vh;
-    margin-left: 1.2vw;
-    margin-right: 1.2vw;
     width: 10vw;
     height: 7vh;
-    border-radius: 10px;
-    background-color: rgb(0, 195, 255);
-    font-size: 2vw;
-    font-family: "Signika", sans-serif;
-    color: rgb(3, 23, 39);
+    margin-left: 1.2vw;
+    margin-right: 1.2vw;
 }
 
-.div_box3{
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    text-indent: 2vw;
-}
-
-.p_titulo2{
-    font-size: 3vw;
-    padding-top: 2vw;
+.div_box2{ 
+    flex-direction: row;
     
 }
+
