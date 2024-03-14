@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="script" href="./script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./user.png" id="logo">
+        </div>
+        <ul class="header-buttons">
+            <a href="#" id="a">INÍCIO</a>
+            <a href="#" id="b">SOBRE</a>
+            <a href="#" id="c">CONTATO</a>
+            <a href="#" id="d">SIMULADOR FINCANEIRO</a>
+            <a href="#" id="e">ENTRAR</a>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="calculatorInter">
+                <h1 class="pd-cima">SIMULADOR DE</h1>
+                <h1 class="pd-baixo">IMPLEMENTAÇÃO</h1>
+                <div><p>Quantidade de entregas no mês:</p><input type="number" id="input_qntdEntregas"></div><br>
+                <div><p>Capacidade de cada entrega:</p><input type="number" id="input_capacidade"></div><br>
+                <div><p>Prejuízo mensal com perdas no transporte:</p><input type="number" id="input_prejuMensal"></div><br>
+                <div><p>Prejuízo mensal com perdas no transporte:</p><input type="number" id="input_prejuMensal"></div><br>
+                <button onclick="calcularSolucao()">CALCULAR</button>
+        </div>
+    </div>
+</body>
+</html>
