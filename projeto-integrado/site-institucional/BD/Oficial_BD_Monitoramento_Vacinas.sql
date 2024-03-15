@@ -6,7 +6,7 @@ CREATE TABLE Usuario (
     nome varchar(50) NOT NULL,
     email varchar(255) NOT NULL,
     senha varchar(30) NOT NULL,
-    telefone varchar(14)
+    telefone char(11)
 );
 
 CREATE TABLE Empresa (
@@ -50,7 +50,8 @@ INSERT INTO Usuario VALUES
 (DEFAULT,'Victor','victor.moralles@sptech.school','44444444',333333333333),
 (DEFAULT,'Alexandre','alexandre.frizzon@sptech.school','143456',444444444),
 (DEFAULT,'Juliana','juliana.murakami@sptech.school','1244456',5555555555),
-(DEFAULT,'Lais','lais.arouca@sptech.school','123456',11111111111);
+(DEFAULT,'Lais','lais.arouca@sptech.school','123456',11111111111),
+(DEFAULT, 'Ryan', 'ryan.costa@sptech.school', '123459',11231233212);
 
 SELECT * FROM Usuario;
 
@@ -68,12 +69,12 @@ INSERT INTO Empresa VALUES
 (default,'12345678901239','Uber','Avenida Nordestina, Carlos Patino , 359',66);
 
 SELECT * FROM Empresa;
-DELETE FROM Empresa
-    WHERE id_Empresa = 1;
+DELETE FROM Empresa WHERE id_Empresa = 1;
 ALTER TABLE Empresa MODIFY COLUMN endereco VARCHAR(100);
 DESC Empresa;
 ALTER TABLE Empresa RENAME COLUMN endereco TO logradouro;
 DESC Empresa;
+
 UPDATE Empresa SET nome = 'Aroucca Solutions'
     WHERE id_Empresa = 7;
     
@@ -91,8 +92,7 @@ insert into Sensor values
 (DEFAULT, 'DHT11F', '29.42', '81.71', 'Ativo');
 
 SELECT * FROM Sensor;
-SELECT * FROM Sensor
-	WHERE statusSensor LIKE "%a%";
+SELECT * FROM Sensor WHERE statusSensor LIKE "%a%";
 SELECT nome FROM Sensor;
 
 -- =====================================================================
