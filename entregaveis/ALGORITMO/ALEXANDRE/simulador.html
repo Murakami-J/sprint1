@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro - Vacinas</title>
+</head>
+
+<body style="background-color: gray;">
+    <div
+        style="width: 930px; height: 600px; background-color: #30c7ccb6;  border: 3px solid rgb(5, 148, 141);; margin-left: auto; margin-right: auto;">
+        <h1 style="justify-content: center; display: flex;">Simule Sua Perda</h1>
+        <span style="margin: 5px;"> Nome da empresa:</span>
+        <input id="nome" style=" margin: 5px;">
+        <span style="margin: 5px;">Qual o custo unitário da fabricação da vacina?</span>
+        <input id="custo" style="margin: 5px;">
+        <br>
+        <br>
+        <span style="margin: 5px;">Quantas lotes são transportados por viagem?</span>
+        <input id="lote" style="margin: 5px;">
+        <span style="margin: 5px;">Quantas vacinas tem em um lote?</span>
+        <input id="vacina" style="margin: 5px;">
+        <br>
+        <br>
+        <span style="margin: 5px;">Em Media, Quantas vacinas são perdidas por viagem?</span>
+        <input id="perda" style="margin: 5px;">
+        <br>
+        <br>
+        <span style="margin: 5px;">Quantas viagens são feitas por mês?</span>
+        <input id="mes" style="margin: 5px;">
+        <br>
+        <br>
+        <Button onclick="simular()" style="margin: auto; display: block; border: 2px solid black;"> Simular Perda
+        </Button>
+        <br>
+        <p id="tela" style="margin: 5px;"></p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function simular() {
+        var PerdaMes = perda.value * custo.value * mes.value
+        var perdaano = perda.value * custo.value * mes.value * 12
+        var umLote = lote.value * vacina.value
+        var porcentagem = perda.value / umLote * 100
+
+        tela.innerHTML = `Olá ${nome.value}, Você perde aproximadamente ${porcentagem}% das suas vacinas por viagem, cerca de R$${PerdaMes} por mês e $${perdaano} no ano, comprando a nossa solução nos te ajudaremos a diminiur bruscamente esta perda mensal!`
+
+    }
+
+
+
+</script>
