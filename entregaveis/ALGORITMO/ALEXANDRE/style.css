@@ -1,0 +1,35 @@
+body {
+    background-color: gray;
+}
+
+div {
+    width: 930px;
+    height: 600px;
+    background-color: #30c7ccb6;
+    border: 3px solid rgb(5, 148, 141);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    justify-content: center;
+    display: flex;
+}
+
+span {
+    margin: 5px;
+}
+
+input {
+    margin: 5px;
+}
+
+button{
+    margin: auto;
+    display: block;
+    border: 2px solid black;
+}
+
+p{
+    margin: 5px;
+}

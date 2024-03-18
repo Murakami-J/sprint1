@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro - Vacinas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Simule Sua Perda</h1>
+        <span> Nome da empresa:</span>
+        <input id="nome">
+        <span>Qual o custo unitário da fabricação da vacina?</span>
+        <input id="custo">
+        <br>
+        <br>
+        <span>Quantas lotes são transportados por viagem?</span>
+        <input id="lote">
+        <span style="margin: 5px;">Quantas vacinas tem em um lote?</span>
+        <input id="vacina">
+        <br>
+        <br>
+        <span style="margin: 5px;">Em Media, Quantas vacinas são perdidas por viagem?</span>
+        <input id="perda">
+        <br>
+        <br>
+        <span class="span1">Quantas viagens são feitas por mês?</span>
+        <input class="input1" id="mes">
+        <br>
+        <br>
+        <Button onclick="simular()"> Simular Perda
+        </Button>
+        <br>
+        <p id="tela"></p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function simular() {
+        var PerdaMes = perda.value * custo.value * mes.value
+        var perdaano = perda.value * custo.value * mes.value * 12
+        var umLote = lote.value * vacina.value
+        var porcentagem = perda.value / umLote * 100
+
+        tela.innerHTML = `Olá ${nome.value}, Você perde aproximadamente ${porcentagem}% das suas vacinas por viagem, cerca de R$${PerdaMes} por mês e $${perdaano} no ano, comprando a nossa solução nos te ajudaremos a diminiur bruscamente esta perda mensal!`
+    }
+
+</script>
