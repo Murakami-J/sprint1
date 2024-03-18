@@ -15,12 +15,11 @@ void loop() {
   if(isnan(temperatura) or isnan(umidade)){
     Serial.println("Erro ao ler"); 
   } else {
-    Serial.print("Umidade: ");
-    Serial.print(umidade);
-    Serial.print(" % ");
-    Serial.print(" Temperatura: ");
-    Serial.print(temperatura);
-    Serial.println(" ºC");
+    Serial.print(temperatura - 26);
+    Serial.print(" ");
+    Serial.println(umidade - 17);
+    
+    
   }
   delay(2000);
 }
