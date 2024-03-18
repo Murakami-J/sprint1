@@ -1,33 +1,11 @@
-.calculatorInter {
-    background-color: #efefef;
-    display:flex;
-    width: 50vw;
-    padding: 30px;
-    flex-direction: column;
-    justify-content: center;
-    border: solid 3px black;
-    border-radius: 40px;
-    margin-top: 15px;
-}
-.calculatorInter button {
-    height: 30px;
-    width: 300px;
-    border-radius: 30px;
-    border: solid 1px black;
-}
-.main {
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100vw;
+    justify-content: space-between;
     height: 80px;
-    background-image: linear-gradient(to right, darkblue, blue);
+    padding-inline: 20px;
 }
 .header-buttons{
     display: flex;
@@ -41,30 +19,99 @@
     padding-inline: 20px;
     padding-block: 5px;
     color: white;
-    border: solid 3px #d9d9d9;
     border-radius: 40px;
-    text-decoration: none;
-    font-weight: 500;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: none;
+}
+.container {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
 }
 .logo {
-    width:200px;
+    width:300px;
     max-height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    color: #EDF0F5;
 }
-#logo {
-    max-height: 50px;
+.main {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.calculatorInter {
+    background-color: #EDF0F5;
+    display:flex;
+    width: 600px;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+.calculatorInter button {
+    height: 30px;
+    width: 200px;
+    border-radius: 30px;
+    border: solid 0px;
+    background-color: black;
+    color: white;
+    align-self: center;
 }
 .infoBox {
-    background-color: #e6e6e6;
-    border: solid 1px black;
+    background-color: white;
+    border: solid 1px #101427;
     width: 100%;
     box-sizing: border-box;
     padding-inline: 15px;
     padding-block: 20px;
     border-radius: 5px;
+}
+.footer {
+    margin-top: 25px;
+    width: 100%;
+    height: 85px;
+    background-color: #0E0F17;
+}
+.l1 {
+    padding-top: 20px;
+    /* width: 350px; */
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+.l1 a {
+    padding-inline: 10px;
+    color: white;
+    text-decoration:none;
+    font-size: 13px
+}
+.l2 {
+    width:52vw;
+    padding: 16px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.l2 p{
+    color: white;
+    font-size: 13px;
+}
+.l2 img{
+    width: 16px;
+
+}
+.redesSo {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
 }
 /* --------ELEMENTOS ABSOLUTOS-------- */
 h1 {
@@ -75,44 +122,35 @@ h3{
 }
 body {
     margin: 0;
-    font-family: "Rubik", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    background-image: url(../img/bg.png);
+    background-size: 100% 100vw;
+    overflow-x: hidden;
 }
 input {
     width:100%;
-    border: solid 1px black;
+    border: solid 1px #101427;
     border-radius: 10px;
     padding: 5px;
 }
 p {
     margin: 0
 }
-/* --------FIM DOS ELEMENTOS ABSOLUTOS-------- */
-
-
+/* --------ID-------- */
+#resolucao {
+    text-align: center;
+}
+#t2{
+    font-size: 15px ;
+}
+#logo {
+    max-height: 50px;
+    padding-right: 5px;
+}
 /* --------POSIÇÕES PARA O ELEMENTO-------- */
 .pd-baixo {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .pd-cima {
-    padding-top:20px;
+    padding-top: 20px;
 }
-/* --------FIM DAS POSIÇÕES-------- */
-
-
-/* --------HOVER-------- */
-#a:hover{
-    background-color: #add8e666;
-}
-#b:hover{
-    background-color: #add8e666;
-}
-#c:hover{
-    background-color: #add8e666;
-}
-#d:hover{
-    background-color: #add8e666;
-}
-#e:hover{
-    background-color: #add8e666;
-}
-/* --------FIM DO HOVER-------- */
