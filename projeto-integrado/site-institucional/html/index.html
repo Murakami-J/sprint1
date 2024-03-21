@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Document</title>
+    <title>Simulador de Implementação | TemperatusCorp</title>
 </head>
 <body>
     <div class="header">
@@ -25,13 +25,14 @@
     </div>
     <div class="main">
         <div class="calculatorInter">
-                <h1 class="pd-baixo pd-cima">SIMULADOR DE IMPLEMENTAÇÃO</h1>
-                <div><p>Quantidade de entregas no mês:</p><input type="number" id="inputQtdEntrega"></div><br>
-                <div><p>Capacidade de lotes por entrega:</p><input type="number" id="inputQtdLote"></div><br>
-                <div><p>Capacidade de vacinas por lote:</p><input type="number" id="inputQtdVacina"></div><br>
-                <div><p>Valor médio das vacinas:</p><input type="number" id="inputValorVacina"></div><br>
-                <div class="infoBox" id="info"></div><br>
-                <button onclick="calcularSolucao()">CALCULAR</button><br>
+                <h1 class="pd-baixo pd-cima">Calcule seu Prejuízo Potencial Agora e Proteja seus Ganhos!</h1>
+                <div id="content">
+                    <div><p>Valor médio das vacinas:</p><input type="number" id="inputValorVacina"></div><br>
+                    <div><p>Capacidade de vacinas por lote:</p><input type="number" id="inputQtdVacina"></div><br>
+                    <div><p>Capacidade de lotes por entrega:</p><input type="number" id="inputQtdLote"></div><br>
+                    <div><p>Quantidade de entregas no mês:</p><input type="number" id="inputQtdEntrega"></div><br>
+                    <div class="bt"><button onclick="calcularSolucao()">CALCULAR</button><br></div>
+                </div>
                 <div id="resolucao"></div>
                 <script src="../JS/script.js"></script>
         </div>
@@ -45,7 +46,7 @@
         <div class="l2">
             <p>© TemperatusCorp - 2024</p>
             <div class="redesSo">
-                <img src="../img/zapzap.svg" href="https://web.whatsapp.com/">
+                <img src="../img/zapzap.svg">
                 <img src="../img/insta.svg">
                 <img src="../img/email.svg">
                 <img src="../img/x.svg">

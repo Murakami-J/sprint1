@@ -56,20 +56,28 @@
     border-radius: 40px;
     margin-top: 20px;
 }
-.calculatorInter button {
-    height: 30px;
+.bt{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+.bt button {
     width: 200px;
+    height: 30px;
     border-radius: 30px;
     border: solid 0px;
     background-color: black;
     color: white;
-    align-self: center;
 }
+
+
 .infoBox {
     background-color: white;
     border: solid 1px #101427;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Respeitar as propriedades de tamanho do elemento pai*/
     padding-inline: 15px;
     padding-block: 20px;
     border-radius: 5px;
@@ -125,7 +133,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-image: url(../img/bg.png);
     background-size: 100% 100vw;
-    overflow-x: hidden;
+    overflow-x: hidden;  /*Esconder o que "sobra" da página, para não ter barra de rolagem horizontal*/
 }
 input {
     width:100%;
@@ -134,7 +142,8 @@ input {
     padding: 5px;
 }
 p {
-    margin: 0
+    margin: 0;
+    font-size: 18px;
 }
 /* --------ID-------- */
 #resolucao {
