@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="div">
+            <h1>Simulador Financeiro</h1>
+
+            <p>Digite a capacidade de vacinas por lote</p>
+            <input type="number" id="input_vacinaLote">
+
+            <p>Valor vacina</p>
+            <input type="number" id="input_valor">
+
+            <p>Quantidade de entrega por mês</p>
+            <input type="number" id="input_entrega">
+
+            <button onclick="calcular()">Calcular</button> <br>
+
+            <div id="mostrar"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var vacinaLote = Number(input_vacinaLote.value)
+        var valor = Number(input_valor.value)
+        var entrega = Number(input_entrega.value)
+
+        var resultado = (valor * vacinaLote * entrega) * 12
+
+        mostrar.innerHTML = `No ano sua perda é de R$${resultado}`
+
+    }
+</script>
